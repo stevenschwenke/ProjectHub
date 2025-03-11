@@ -15,3 +15,7 @@ Shortcut script:
 ----
 ./restart-local-jekyll.sh
 ----
+
+== Use Your Own Data
+
+Put your confidential project data to _data/projects.yml. They will not be commited to Git.

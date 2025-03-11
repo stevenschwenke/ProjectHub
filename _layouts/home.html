@@ -16,6 +16,9 @@
     </tr>
     </thead>
     <tbody>
+
+
+    {% if site.data.projects %}
     {% for project in site.data.projects %}
     <tr>
         <td>{{ project.name }}</td>
@@ -23,6 +26,16 @@
         <td>{{ project.iac }}</td>
     </tr>
     {% endfor %}
+    {% else %}
+    {% for project in site.data.default-projects %}
+    <tr>
+        <td>{{ project.name }}</td>
+        <td>{{ project.customer }}</td>
+        <td>{{ project.iac }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+
     </tbody>
 </table>
 </body>

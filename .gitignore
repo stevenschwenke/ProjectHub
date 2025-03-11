@@ -13,3 +13,5 @@ vendor/
 *.iws
 out/
 
+# Protect confidential data
+_data/projects.yml
