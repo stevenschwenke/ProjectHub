@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Development Projects</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-</head>
-
 <body>
 <div class="container my-5">
     <h1 class="text-center mb-4">Software Development Projects</h1>
     <div class="table-responsive">
-        <table class="table table-bordered table-striped table-hover align-middle">
+        <table id="projectsTable" class="table table-bordered table-striped table-hover align-middle">
             <thead class="table-dark">
             <tr>
                 <th>Name</th>
@@ -45,11 +35,40 @@
     </div>
 </div>
 
-<!-- Bootstrap JS -->
+
+
 <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/jquery-3.7.1.min"></script>
+<script src="/assets/datatables/datatables.js"></script>
+
+
+<script>
+    // Initialize DataTable on the #projectsTable element
+    $(document).ready(function () {
+        $('#projectsTable').DataTable({
+            "searching": true,  // Enable the search/filter box
+            "autoWidth": false,  // Disable auto column width adjustment
+            "colReorder": true,
+            "fixedColumns": true,
+            "fixedHeader": true
+        });
+    });
+</script>
 
 
 </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development Projects</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Datatables -->
+    <link href="/assets/datatables/datatables.css" rel="stylesheet">
+</head>
 
 
 </html>
