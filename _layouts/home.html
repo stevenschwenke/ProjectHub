@@ -4,39 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software Development Projects</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
+
 <body>
-<h1>Software Development Projects</h1>
-<table>
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Customer</th>
-        <th>IaC</th>
-    </tr>
-    </thead>
-    <tbody>
+<div class="container my-5">
+    <h1 class="text-center mb-4">Software Development Projects</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover align-middle">
+            <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Customer</th>
+                <th>IaC</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% if site.data.projects %}
+            {% for project in site.data.projects %}
+            <tr>
+                <td>{{ project.name }}</td>
+                <td>{{ project.customer }}</td>
+                <td>{{ project.iac }}</td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            {% for project in site.data.default-projects %}
+            <tr>
+                <td>{{ project.name }}</td>
+                <td>{{ project.customer }}</td>
+                <td>{{ project.iac }}</td>
+            </tr>
+            {% endfor %}
+            {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
-    {% if site.data.projects %}
-    {% for project in site.data.projects %}
-    <tr>
-        <td>{{ project.name }}</td>
-        <td>{{ project.customer }}</td>
-        <td>{{ project.iac }}</td>
-    </tr>
-    {% endfor %}
-    {% else %}
-    {% for project in site.data.default-projects %}
-    <tr>
-        <td>{{ project.name }}</td>
-        <td>{{ project.customer }}</td>
-        <td>{{ project.iac }}</td>
-    </tr>
-    {% endfor %}
-    {% endif %}
-
-    </tbody>
-</table>
 </body>
+
+
 </html>
