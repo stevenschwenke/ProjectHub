@@ -1,4 +1,4 @@
-# ProjectHub
+= ProjectHub
 
 == Build Production Docker Container
 
