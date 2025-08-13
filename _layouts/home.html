@@ -12,6 +12,7 @@
                 <th>Customer Stakeholder</th>
                 <th>Business Case</th>
                 <th>Tech</th>
+                <th>Team</th>
                 <th>Notes</th>
             </tr>
             </thead>
@@ -28,6 +29,11 @@
                         {{ technology }},
                         {% endfor %}
                 </td>
+                <td>
+                    {% for member in project.team %}
+                    {{ member }},
+                    {% endfor %}
+                </td>
                 <td>{{ project.notes }}</td>
             </tr>
             {% endfor %}
@@ -41,6 +47,11 @@
                 <td>
                     {% for technology in project.technologies %}
                     {{ technology }},
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for member in project.team %}
+                    {{ member }},
                     {% endfor %}
                 </td>
                 <td>{{ project.notes }}</td>

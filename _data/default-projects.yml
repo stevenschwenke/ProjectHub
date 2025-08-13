@@ -2,6 +2,9 @@
   customer: "Company A"
   customer-stakeholder: "Mister Alpha Omega (project manager)<br><br>Dr. A. Alphredo (assistant)"
   business-case: "This project solves xyz"
+  team:
+    - "Max Maximum (dev)"
+    - "Forra Frontend (host)"
   technologies:
     - "Terraform"
     - "Spring Boot"
@@ -12,6 +15,9 @@
   customer: "Company B"
   customer-stakeholder: "Mrs. B. Belafonte"
   business-case: "Production of Betas because it's project Beta"
+  team:
+    - "Lee-Anne Leader (project lead)"
+    - "Hector Hackbard (dev)"
   technologies:
     - "Cloud Formation"
     - "Spring Boot"
@@ -22,6 +28,8 @@
   customer: "Company C"
   customer-stakeholder: "Claud C. Cloud (Cloud architect)"
   business-case: "We don't know what this is going to be all about yet ..."
+  team:
+    - "Udo Unknown (junior dev)"
   technologies:
     - "Pulumi"
     - "Spring Boot"
