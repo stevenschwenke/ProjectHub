@@ -1,4 +1,9 @@
-= ProjectHub
+= ProjectHub: A tool to track software development projects in a dynamic environment
+
+== Concepts
+
+- local-only data for full privacy
+- incomplete data first to cover dynamic project landscapes
 
 == Build Production Docker Container
 
