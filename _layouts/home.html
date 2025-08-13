@@ -9,7 +9,10 @@
             <tr>
                 <th>Name</th>
                 <th>Customer</th>
-                <th>IaC</th>
+                <th>Customer Stakeholder</th>
+                <th>Business Case</th>
+                <th>Tech</th>
+                <th>Notes</th>
             </tr>
             </thead>
             <tbody>
@@ -18,7 +21,14 @@
             <tr>
                 <td>{{ project.name }}</td>
                 <td>{{ project.customer }}</td>
-                <td>{{ project.iac }}</td>
+                <td>{{ project.customer-stakeholder }}</td>
+                <td>{{ project.business-case }}</td>
+                <td>
+                        {% for technology in project.technologies %}
+                        {{ technology }},
+                        {% endfor %}
+                </td>
+                <td>{{ project.notes }}</td>
             </tr>
             {% endfor %}
             {% else %}
@@ -26,7 +36,14 @@
             <tr>
                 <td>{{ project.name }}</td>
                 <td>{{ project.customer }}</td>
-                <td>{{ project.iac }}</td>
+                <td>{{ project.customer-stakeholder }}</td>
+                <td>{{ project.business-case }}</td>
+                <td>
+                    {% for technology in project.technologies %}
+                    {{ technology }},
+                    {% endfor %}
+                </td>
+                <td>{{ project.notes }}</td>
             </tr>
             {% endfor %}
             {% endif %}
